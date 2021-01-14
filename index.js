@@ -9,7 +9,7 @@ const questions = ([
         message: 'What is your name?',
       },
       {
-        type: 'checkbox',
+        type: 'input',
         message: 'What languages do you know?',
         name: 'stack',
         choices: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
@@ -31,9 +31,10 @@ function writeFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
 inquirer.prompt(questions).then((response) => {
-    console.log(response)
-    writeFile("README.md"), GenerateFunction())
-});
+    //console.log(response)
+    writeFile("README.md"), GenerateFunction()
+})
+};
 
 
 // Function call to initialize app
