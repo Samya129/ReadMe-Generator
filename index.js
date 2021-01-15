@@ -6,7 +6,8 @@ const asyncWrite = util.promisify(fs.writeFile) //method like document.ready
 
 // TODO: Create an array of questions for user input
 const generateREADME = (inquiryResponses) => 
-`# ${inquiryResponses.title} 
+`
+# ${inquiryResponses.title} 
 
 ## Description 
 
@@ -16,30 +17,40 @@ ${inquiryResponses.description}
 
 * [Installation](#installation)
 * [Usage](#usage)
-* [Guidelines](#guidelines)
+* [License](#license)
+* [Contributions](#contributions)
 * [Tests](#tests)
-* [Submission](#submission)
+* [Questions](#questions)
 
 ### Installation
 
+\`\`\`
 ${inquiryResponses.installation}
+\`\`\`
 
 ### Usage
 
-* ${inquiryResponses.usageInfo}
+${inquiryResponses.usageInfo}
 
-### Guidelines 
+### License 
 
-* ${inquiryResponses.guidelines}
+${inquiryResponses.License}
 
-## Tests 
+## Contributions 
 
-${inquiryResponses.instructions}
+${inquiryResponses.contributionGuidelines}
 
-## Submission
+## Tests
 
-* [Github](${inquiryResponses.github})-The Github Repository
-* [Deployment](${inquiryResponses.deployment})- The Deployed Application
+\`\`\`
+${inquiryResponses.testInstructions}
+\`\`\`
+
+## Questions
+
+* If you have any questions regarding this repository, contact me either by email at [Email](${inquiryResponses.email}) or you can find more of my work within my github account attached below.
+
+* [Github](${inquiryResponses.github})
 `
 //init function
 function init(){
