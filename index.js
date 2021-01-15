@@ -77,9 +77,11 @@ inquirer
         message: 'What are the required usage information needed for this project?',
       },
       {
-        type: 'input',
+        type: 'list',
         message: 'What is the license for this project?',
         name: 'license',
+        choices: ['Public Domain', 'Permissive', 'LGPL', 'Copyleft','Proprietary' ,'None']
+
       },
       {
         type: 'input',
