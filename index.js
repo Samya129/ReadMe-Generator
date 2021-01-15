@@ -7,7 +7,10 @@ const asyncWrite = util.promisify(fs.writeFile) //method like document.ready
 
 // TODO: Create an array of questions for user input
 const generateREADME = (inquiryResponses) => 
-`# ${inquiryResponses.title} `
+`# ${inquiryResponses.title} 
+## Description 
+${inquiryResponses.description}
+`
 
 //init function
 function init(){
