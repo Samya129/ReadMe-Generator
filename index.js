@@ -63,28 +63,34 @@ inquirer
       {
         type: 'input',
         name: 'usageInfo',
-        message: 'What are the required usage information?',
+        message: 'What are the required usage information needed for this project?',
       },
       {
         type: 'input',
-        message: 'Any concentration guidelines? If not applicable, type NA',
-        name: 'guidelines',
+        message: 'What is the license for this project?',
+        name: 'license',
       },
       {
         type: 'input',
-        name: 'instructions',
+        message: 'Any contribution guidelines you would like to add? If not applicable, type NA',
+        name: 'contributionGuidelines',
+      },
+      {
+        type: 'input',
+        name: 'testInstructions',
         message: 'What are the test instructions for this project?',
       },
       {
         type: 'input',
-        name: 'github',
-        message: 'Please attach your github repository link ',
+        name: 'email',
+        message: 'What is your e-mail address?',
       },
       {
         type: 'input',
-        name: 'deployment',
-        message: 'Now, attach your deployment link',
+        name: 'github',
+        message: 'What is your github repository link? Please attach the link here.',
       },
+
     ]).then((inquiryResponses) => {
         const filename = `${inquiryResponses.title}.md`;
     
