@@ -12,11 +12,19 @@ const generateREADME = (inquiryResponses) =>
 
 ${inquiryResponses.description}
 
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Guidelines](#guidelines)
+* [Tests](#tests)
+* [Submission](#submission)
+
 ### Installation
 
 ${inquiryResponses.installation}
 
-### Usage Instructions
+### Usage
 
 * ${inquiryResponses.usageInfo}
 
@@ -24,14 +32,15 @@ ${inquiryResponses.installation}
 
 * ${inquiryResponses.guidelines}
 
-## Test instructions 
+## Tests 
 
 ${inquiryResponses.instructions}
 
 ## Submission
 
 * [Github](${inquiryResponses.github})-The Github Repository
-* [Deployment](${inquiryResponses.deployment})- The Deployed Application`
+* [Deployment](${inquiryResponses.deployment})- The Deployed Application
+`
 //init function
 function init(){
 inquirer
