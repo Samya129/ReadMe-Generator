@@ -4,14 +4,45 @@ const inquirer = require("inquirer");
 const util = require("util") //library
 const asyncWrite = util.promisify(fs.writeFile) //method like document.ready
 
-
 // TODO: Create an array of questions for user input
 const generateREADME = (inquiryResponses) => 
 `# ${inquiryResponses.title} 
-## Description 
-${inquiryResponses.description}
-`
 
+## Description 
+
+\`\`\`
+${inquiryResponses.description}
+\`\`\`
+
+## Table of Contents
+
+### Installation Instructions
+
+* ${inquiryResponses.installation}
+
+### Usage Instructions
+
+* ${inquiryResponses.usageInfo}
+
+### Guidelines 
+
+** ${inquiryResponses.guidelines}**
+
+### Test instructions 
+
+${inquiryResponses.instructions}
+
+## Submission
+
+* [Github](${inquiryResponses.github})-The Github Repository
+* [Deployment](${inquiryResponses.deployment})- The Deployed Application
+
+## Table of Contents
+* **Installation**: Node
+* **Usage**:
+* **Credits**: 
+* **Licenses**: 
+`
 //init function
 function init(){
 inquirer
@@ -56,7 +87,6 @@ inquirer
         name: 'deployment',
         message: 'Now, attach your deployment link',
       },
-
     ]).then((inquiryResponses) => {
         const filename = `${inquiryResponses.title}.md`;
     

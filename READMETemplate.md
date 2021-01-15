@@ -23,3 +23,14 @@ ${inquiryResponses.description}
 ### Test instructions 
 
 ${inquiryResponses.instructions}
+
+## Submission
+
+* [Github](${inquiryResponses.github})-The Github Repository
+* [Deployment](${inquiryResponses.deployment})- The Deployed Application
+
+## Table of Contents
+* **Installation**: Node
+* **Usage**:
+* **Credits**: 
+* **Licenses**: 
