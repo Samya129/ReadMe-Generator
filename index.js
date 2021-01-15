@@ -7,8 +7,10 @@ const asyncWrite = util.promisify(fs.writeFile) //method like document.ready
 
 // TODO: Create an array of questions for user input
 const generateREADME = (inquiryResponses) => 
-`<h1 class="display-4">Hi! My name is ${inquiryResponses.title}</h1>`
+`# ${inquiryResponses.title} `
 
+//init function
+function init(){
 inquirer
   .prompt([
     {
@@ -30,7 +32,6 @@ inquirer
         type: 'input',
         name: 'usageInfo',
         message: 'What are the required usage information?',
-        //choices: ['email', 'phone', 'telekinesis'],
       },
       {
         type: 'input',
@@ -42,13 +43,23 @@ inquirer
         name: 'instructions',
         message: 'What are the test instructions for this project?',
       },
+      {
+        type: 'input',
+        name: 'github',
+        message: 'Please attach your github repository link ',
+      },
+      {
+        type: 'input',
+        name: 'deployment',
+        message: 'Now, attach your deployment link',
+      },
 
     ]).then((inquiryResponses) => {
         const filename = `${inquiryResponses.title}.md`;
     
         return asyncWrite(filename, generateREADME(inquiryResponses) )}
     ) .then (()=>{ console.log("Success!")}).catch ((err)=>{console.log(err)}) ;
-    
+}
     // err ? console.log(err) : console.log("Success!")
 
 // TODO: Create a function to write README file
@@ -68,4 +79,4 @@ inquirer
 
 
 // // Function call to initialize app
-// init();
+ init();
