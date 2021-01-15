@@ -7,7 +7,10 @@ ${inquiryResponses.description}
 ## Table of Contents
 
 * [Installation](#installation)
-* [Usage
+* [Usage](#usage)
+* [Guidelines](#guidelines)
+* [Tests](#tests)
+* [Submission](#submission)
 
 ### Installation
 
@@ -21,7 +24,7 @@ ${inquiryResponses.installation}
 
 * ${inquiryResponses.guidelines}
 
-## Test instructions 
+## Tests 
 
 ${inquiryResponses.instructions}
 
