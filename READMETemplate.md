@@ -10,27 +10,37 @@ ${inquiryResponses.description}
 
 ### Installation Instructions
 
+\`\`\`
 * ${inquiryResponses.installation}
+\`\`\`
 
 ### Usage Instructions
 
+\`\`\`
 * ${inquiryResponses.usageInfo}
+\`\`\`
 
 ### Guidelines 
 
+\`\`\`
 ** ${inquiryResponses.guidelines}**
+\`\`\`
 
 ### Test instructions 
 
+\`\`\`
 ${inquiryResponses.instructions}
+\`\`\`
 
 ## Submission
 
+\`\`\`
 * [Github](${inquiryResponses.github})-The Github Repository
 * [Deployment](${inquiryResponses.deployment})- The Deployed Application
+\`\`\`
 
 ## Table of Contents
 * **Installation**: Node
 * **Usage**:
 * **Credits**: 
-* **Licenses**: 
+* **Licenses**:
