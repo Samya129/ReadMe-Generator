@@ -85,8 +85,8 @@ inquirer
       },
       {
         type: 'input',
-        message: 'Any contribution guidelines you would like to add? If not applicable, type NA',
-        name: 'contributionGuidelines',
+        message: 'Any contributing guidelines you would like to add? If not applicable, type NA',
+        name: 'contributingGuidelines',
       },
       {
         type: 'input',
@@ -101,7 +101,7 @@ inquirer
       {
         type: 'input',
         name: 'github',
-        message: 'What is your github repository link? Please attach the link here.',
+        message: 'What is your github username?',
       },
 
     ]).then((inquiryResponses) => {
