@@ -5,53 +5,64 @@ const util = require("util") //library
 const asyncWrite = util.promisify(fs.writeFile) //method like document.ready
 
 // TODO: Create an array of questions for user input
-const generateREADME = (inquiryResponses) => 
-`# ${inquiryResponses.title} 
+const generateREADME = (inquiryResponses) => {
+ const licenseBadges = {
+   MIT:"[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+ }
+ console.log(licenseBadges.MIT)
+ const yourLicense = inquiryResponses.license;
+ //console.log(licenseBadges.yourLicense)
+ ${licenseBadges.yourLicense}
+ //['MIT', 'Apache', 'Boost', 'BSD','None']
+  return `# ${inquiryResponses.title} 
 
-## Description 
+  ## Description 
+  
+  ${inquiryResponses.description}
+  
+  ## Table of Contents
+  
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
+  
+  ### Installation
+  
+  \`\`\`
+  ${inquiryResponses.installation}
+  \`\`\`
+  
+  ### Usage
+  
+  ${inquiryResponses.usageInfo}
+  
+  ### License 
+  
+   This project is licensed under an ${inquiryResponses.license} license.
+  
+  ## Contributing 
+  
+  ${inquiryResponses.contributingGuidelines}
+  
+  ## Tests
+  
+  To run test, run the following commands:
+  
+  \`\`\`
+  ${inquiryResponses.testInstructions}
+  \`\`\`
+  
+  ## Questions
+  
+  * If you have any questions regarding this repository, contact me either by email at **${inquiryResponses.email}**, or you can find more of my work within my github account attached here [${inquiryResponses.github}](https://github.com/${inquiryResponses.github}). Here, you can open an issue if needed.
+   
+  `;
+}
 
-${inquiryResponses.description}
 
-## Table of Contents
-
-* [Installation](#installation)
-* [Usage](#usage)
-* [License](#license)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [Questions](#questions)
-
-### Installation
-
-\`\`\`
-${inquiryResponses.installation}
-\`\`\`
-
-### Usage
-
-${inquiryResponses.usageInfo}
-
-### License 
-
- This project is licensed under an ${inquiryResponses.license} license.
-
-## Contributing 
-
-${inquiryResponses.contributingGuidelines}
-
-## Tests
-
-To run test, run the following commands:
-
-\`\`\`
-${inquiryResponses.testInstructions}
-\`\`\`
-
-## Questions
-
-* If you have any questions regarding this repository, contact me either by email at **${inquiryResponses.email}**, or you can find more of my work within my github account attached here [${inquiryResponses.github}](https://github.com/${inquiryResponses.github}). Here, you can open an issue if needed.
- 
-`
 //init function
 function init(){
 inquirer
@@ -80,7 +91,13 @@ inquirer
         type: 'list',
         message: 'What is the license for this project?',
         name: 'license',
-        choices: ['MIT', 'Apache', 'Boost', 'BSD','None']
+        choices: ['MIT', 'Apache', 'Boost', 'BSD','None'],
+        function (choices) {
+          if (choices.length < 1) {
+              return console.log("A valid GitHub repo is required for a badge.");
+          }
+          return true;
+      }
 
       },
       {
