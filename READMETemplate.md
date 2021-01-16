@@ -34,12 +34,11 @@ ${inquiryResponses.contributingGuidelines}
 ## Tests
 
 To run test, run the following commands:
+
 ```
 ${inquiryResponses.testInstructions}
 ```
 
 ## Questions
 
-* If you have any questions regarding this repository, contact me either by email at [Email](${inquiryResponses.email}), or you can find more of my work within my github account attached below. Here, you can open an issue if needed.
-
-* [${inquiryResponses.github}](https://github.com/${inquiryResponses.github})
+* If you have any questions regarding this repository, contact me either by email at **${inquiryResponses.email}**, or you can find more of my work within my github account attached here [${inquiryResponses.github}](https://github.com/${inquiryResponses.github}). Here, you can open an issue if needed.

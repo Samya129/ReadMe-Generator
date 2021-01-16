@@ -6,8 +6,7 @@ const asyncWrite = util.promisify(fs.writeFile) //method like document.ready
 
 // TODO: Create an array of questions for user input
 const generateREADME = (inquiryResponses) => 
-`
-# ${inquiryResponses.title} 
+`# ${inquiryResponses.title} 
 
 ## Description 
 
@@ -18,7 +17,7 @@ ${inquiryResponses.description}
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
-* [Contributions](#contributions)
+* [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
 
@@ -34,13 +33,15 @@ ${inquiryResponses.usageInfo}
 
 ### License 
 
-${inquiryResponses.License}
+ This project is licensed under an ${inquiryResponses.License} license.
 
-## Contributions 
+## Contributing 
 
-${inquiryResponses.contributionGuidelines}
+${inquiryResponses.contributingGuidelines}
 
 ## Tests
+
+To run test, run the following commands:
 
 \`\`\`
 ${inquiryResponses.testInstructions}
@@ -48,9 +49,8 @@ ${inquiryResponses.testInstructions}
 
 ## Questions
 
-* If you have any questions regarding this repository, contact me either by email at [Email](${inquiryResponses.email}) or you can find more of my work within my github account attached below.
-
-* [Github](${inquiryResponses.github})
+* If you have any questions regarding this repository, contact me either by email at **${inquiryResponses.email}**, or you can find more of my work within my github account attached here [${inquiryResponses.github}](https://github.com/${inquiryResponses.github}). Here, you can open an issue if needed.
+ 
 `
 //init function
 function init(){
@@ -80,7 +80,7 @@ inquirer
         type: 'list',
         message: 'What is the license for this project?',
         name: 'license',
-        choices: ['Public Domain', 'Permissive', 'LGPL', 'Copyleft','Proprietary' ,'None']
+        choices: ['MIT', 'Apache', 'Boost', 'BSD','None']
 
       },
       {
