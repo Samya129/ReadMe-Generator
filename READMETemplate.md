@@ -25,7 +25,7 @@ ${inquiryResponses.usageInfo}
 
 ### License 
 
- This project is licensed under an ${inquiryResponses.License} license.
+ This project is licensed under an ${inquiryResponses.license} license.
 
 ## Contributing 
 
