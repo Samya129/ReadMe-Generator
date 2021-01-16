@@ -95,13 +95,6 @@ inquirer
         message: 'What is the license for this project?',
         name: 'license',
         choices: ['MIT', 'Apache', 'Boost', 'BSD','None'],
-        function (choices) {
-          if (choices.length < 1) {
-              return console.log("A valid GitHub repo is required for a badge.");
-          }
-          return true;
-      }
-
       },
       {
         type: 'input',
