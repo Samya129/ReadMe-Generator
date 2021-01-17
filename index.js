@@ -6,17 +6,28 @@ const asyncWrite = util.promisify(fs.writeFile) //method like document.ready
 
 // TODO: Create an array of questions for user input
 const generateREADME = (inquiryResponses) => {
- const licenseBadges = {
-   MIT:'[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
-  Apache: '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
-  Boost: '[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)',
-  BDS: '[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)',
+ let licenseString = ''
+ switch(inquiryResponses.license){
+   //this looks at the selected "license" string, and does something different for each "case"
+   //...of what inquiryResponses.license holds.
+    case "MIT":
+     licenseString = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+      break;
+    case "Apache":
+     licenseString = '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+      break;
+    case "Boost":
+      licenseString = '[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)'
+      break;
+    case "BSD":
+      licenseString = '[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)'
+      break;
+    case "Eclipse":
+      licenseString = '[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)'
+    case "None":
+      licenseString = ''
  }
- //console.log(licenseBadges.MIT) works!
- const yourLicense = licenseBadges.inquiryResponses;
- //console.log(licenseBadges.yourLicense) undefined
- //${licenseBadges.yourLicense}
-  return `# ${inquiryResponses.title} ${licenseBadges.yourLicense}
+  return `# ${inquiryResponses.title} ${licenseString}
 
   ## Description 
   
@@ -43,7 +54,7 @@ const generateREADME = (inquiryResponses) => {
   
   ### License 
   
-   This project is licensed under an ${inquiryResponses.license} license.
+   This project is licensed under: ${inquiryResponses.license}
   
   ## Contributing 
   
@@ -59,7 +70,7 @@ const generateREADME = (inquiryResponses) => {
   
   ## Questions
   
-  * If you have any questions regarding this repository, contact me either by email at **${inquiryResponses.email}**, or you can find more of my work within my github account attached here [${inquiryResponses.github}](https://github.com/${inquiryResponses.github}). Here, you can open an issue if needed.
+  * If you have any questions regarding this repository, contact me either by email at **${inquiryResponses.email}**, or you can find more of my work within my github account attached here [${inquiryResponses.github}](https://github.com/${inquiryResponses.github}). Here, you can also open an issue if needed.
    
   `;
 }
@@ -93,7 +104,7 @@ inquirer
         type: 'list',
         message: 'What is the license for this project?',
         name: 'license',
-        choices: ['MIT', 'Apache', 'Boost', 'BSD','None'],
+        choices: ['MIT', 'Apache', 'Boost', 'BSD','Eclipse','None'],
       },
       {
         type: 'input',

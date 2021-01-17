@@ -25,7 +25,7 @@ ${inquiryResponses.usageInfo}
 
 ### License 
 
- This project is licensed under an ${inquiryResponses.license} license.
+ This project is licensed under: ${inquiryResponses.license}
 
 ## Contributing 
 
@@ -41,4 +41,4 @@ ${inquiryResponses.testInstructions}
 
 ## Questions
 
-* If you have any questions regarding this repository, contact me either by email at **${inquiryResponses.email}**, or you can find more of my work within my github account attached here [${inquiryResponses.github}](https://github.com/${inquiryResponses.github}). Here, you can open an issue if needed.
+* If you have any questions regarding this repository, contact me either by email at **${inquiryResponses.email}**, or you can find more of my work within my github account attached here [${inquiryResponses.github}](https://github.com/${inquiryResponses.github}). Here, you can also open an issue if needed.
