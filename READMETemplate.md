@@ -2,10 +2,13 @@
 
 ## Description 
 
+```
 ${inquiryResponses.description}
+```
 
 ## Table of Contents
 
+* [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
@@ -13,23 +16,29 @@ ${inquiryResponses.description}
 * [Tests](#tests)
 * [Questions](#questions)
 
-### Installation
+## Installation
 
 ```
 ${inquiryResponses.installation}
 ```
 
-### Usage
+## Usage
 
+```
 ${inquiryResponses.usageInfo}
+```
 
-### License 
+## License 
 
+```
  This project is licensed under: ${inquiryResponses.license}
+```
 
 ## Contributing 
 
+```
 ${inquiryResponses.contributingGuidelines}
+```
 
 ## Tests
 

@@ -24,17 +24,22 @@ const generateREADME = (inquiryResponses) => {
       break;
     case "Eclipse":
       licenseString = '[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)'
+      break;
     case "None":
       licenseString = ''
+      break;
  }
   return `# ${inquiryResponses.title} ${licenseString}
 
   ## Description 
   
+  \`\`\`
   ${inquiryResponses.description}
+  \`\`\`
   
   ## Table of Contents
   
+  * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
   * [License](#license)
@@ -42,23 +47,29 @@ const generateREADME = (inquiryResponses) => {
   * [Tests](#tests)
   * [Questions](#questions)
   
-  ### Installation
+  ## Installation
   
   \`\`\`
   ${inquiryResponses.installation}
   \`\`\`
   
-  ### Usage
+  ## Usage
   
+  \`\`\`
   ${inquiryResponses.usageInfo}
+  \`\`\`
   
-  ### License 
+  ## License 
   
+  \`\`\`
    This project is licensed under: ${inquiryResponses.license}
-  
+  \`\`\`
+
   ## Contributing 
   
+  \`\`\`
   ${inquiryResponses.contributingGuidelines}
+  \`\`\`
   
   ## Tests
   
@@ -108,7 +119,7 @@ inquirer
       },
       {
         type: 'input',
-        message: 'Any contributing guidelines you would like to add? If not applicable, type NA',
+        message: 'Any contributing guidelines you would like to add? If not applicable, type NA or just press enter',
         name: 'contributingGuidelines',
       },
       {
@@ -128,7 +139,7 @@ inquirer
       },
 
     ]).then((inquiryResponses) => {
-        const filename = `${inquiryResponses.title}.md`; //'Readme.md'to always make a readmefile name.
+        const filename = `README.md`; //'Readme.md' or '${inquiryResponses.title}' to name the top of the readmefile tab.
     
         return asyncWrite(filename, generateREADME(inquiryResponses) )}
     ) .then (()=>{ console.log("Success!")}).catch ((err)=>{console.log(err)}) ;
