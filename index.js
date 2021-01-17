@@ -7,17 +7,16 @@ const asyncWrite = util.promisify(fs.writeFile) //method like document.ready
 // TODO: Create an array of questions for user input
 const generateREADME = (inquiryResponses) => {
  const licenseBadges = {
-   MIT:"[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
-  Apache: "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
-  Boost: "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)",
-  BDS: "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)",
-}
- console.log(licenseBadges.MIT)
- const yourLicense = inquiryResponses.license;
- //console.log(licenseBadges.yourLicense)
- ${licenseBadges.yourLicense}
- //['MIT', 'Apache', 'Boost', 'BSD','None']
-  return `# ${inquiryResponses.title} 
+   MIT:'[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
+  Apache: '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
+  Boost: '[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)',
+  BDS: '[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)',
+ }
+ //console.log(licenseBadges.MIT) works!
+ const yourLicense = licenseBadges.inquiryResponses;
+ //console.log(licenseBadges.yourLicense) undefined
+ //${licenseBadges.yourLicense}
+  return `# ${inquiryResponses.title} ${licenseBadges.yourLicense}
 
   ## Description 
   
@@ -118,7 +117,7 @@ inquirer
       },
 
     ]).then((inquiryResponses) => {
-        const filename = `${inquiryResponses.title}.md`;
+        const filename = `${inquiryResponses.title}.md`; //'Readme.md'to always make a readmefile name.
     
         return asyncWrite(filename, generateREADME(inquiryResponses) )}
     ) .then (()=>{ console.log("Success!")}).catch ((err)=>{console.log(err)}) ;

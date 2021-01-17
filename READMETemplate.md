@@ -1,4 +1,4 @@
-# ${inquiryResponses.title} 
+# ${inquiryResponses.title} ${licenseBadges.yourLicense}
 
 ## Description 
 
