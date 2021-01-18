@@ -29,16 +29,12 @@ SO THAT I can quickly create a professional README for a new project
 
 ## Usage
 
-```
 * Terminal
 * Javascript
-```
 
 ## License
 
-```
 None
-```
 
 ## Contributing 
 
