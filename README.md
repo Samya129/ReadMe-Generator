@@ -49,7 +49,7 @@ To run test, run the following commands:
 * node index OR node index.js
 ```
 
-## Acceptance Criteria
+## Criteria
 ```
 GIVEN a command-line application that accepts user input
 WHEN I am prompted for information about my application repository
