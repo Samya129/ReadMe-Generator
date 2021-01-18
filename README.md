@@ -24,11 +24,11 @@ SO THAT I can quickly create a professional README for a new project
 
 ## Installation 
 
-* Node Project Manager
-* Inquirer 
+* Node Project Manager: Inquirer 
 
 ## Usage
 
+* Node
 * Terminal
 * Javascript
 
