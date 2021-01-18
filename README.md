@@ -45,6 +45,7 @@ None
 To run test, run the following commands:
 
 ```
+node index OR node index.js
 ```
 
 ## Acceptance Criteria
@@ -68,4 +69,4 @@ THEN I am taken to the corresponding section of the README
 
 ## Questions
 
-* If you have any questions regarding this repository, contact me either by [Email](Samyaf020@gmail.com), or you can find more of my work within my github account attached here [Github](https://github.com/Samya129). Here, you can also open an issue if needed.
+* If you have any questions regarding this repository, contact me either by [Email](https://Samyaf020@gmail.com), or you can find more of my work within my github account attached here [Github](https://github.com/Samya129). Here, you can also open an issue if needed.
