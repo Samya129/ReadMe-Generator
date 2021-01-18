@@ -139,8 +139,7 @@ inquirer
       },
 
     ]).then((inquiryResponses) => {
-        const filename = `${inquiryResponses.title}.md`; //'README.md' or '${inquiryResponses.title}.md' to name the top of the readmefile tab.
-    
+        const filename = `${inquiryResponses.title}.md`; //'README.md' or '${inquiryResponses.title}.md' to name the top of the readmefile tab. Note:Putting it as readme.md WILL replace current readme file that I created.
         return asyncWrite(filename, generateREADME(inquiryResponses) )}
     ) .then (()=>{ console.log("Success!")}).catch ((err)=>{console.log(err)}) ;
 }
