@@ -139,7 +139,7 @@ inquirer
       },
 
     ]).then((inquiryResponses) => {
-        const filename = `README.md`; //'Readme.md' or '${inquiryResponses.title}' to name the top of the readmefile tab.
+        const filename = `${inquiryResponses.title}.md`; //'README.md' or '${inquiryResponses.title}.md' to name the top of the readmefile tab.
     
         return asyncWrite(filename, generateREADME(inquiryResponses) )}
     ) .then (()=>{ console.log("Success!")}).catch ((err)=>{console.log(err)}) ;
