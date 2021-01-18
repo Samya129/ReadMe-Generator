@@ -30,9 +30,8 @@ SO THAT I can quickly create a professional README for a new project
 ## Usage
 
 ```
-* Node Project Manager
+* Terminal
 * Javascript
-* Inquirer
 ```
 
 ## License
@@ -73,4 +72,4 @@ THEN I am taken to the corresponding section of the README
 
 ## Questions
 
-* If you have any questions regarding this repository, contact me either by email at **${Samyaf020@gmail.com}**, or you can find more of my work within my github account attached here [Github](https://github.com/Samya129). Here, you can also open an issue if needed.
+* If you have any questions regarding this repository, contact me either by [Email](Samyaf020@gmail.com), or you can find more of my work within my github account attached here [Github](https://github.com/Samya129). Here, you can also open an issue if needed.
