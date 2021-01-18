@@ -5,6 +5,14 @@ When creating an open source project on GitHub, it’s important to have a high-
 
 You can quickly and easily create a README file by using a command-line application to generate one. This allows the project creator to devote more time to working on the project while also dynamically generating a professional README.md file from a user's input using the Inquirer package.
 
+## User Story
+
+```
+AS A developer
+I WANT a README generator
+SO THAT I can quickly create a professional README for a new project
+```
+
 ## Table of Contents
 * [Description](#description)
 * [Installation](#installation)
@@ -14,14 +22,6 @@ You can quickly and easily create a README file by using a command-line applicat
 * [Tests](#tests)
 * [Questions](#questions)
 
-## User Story
-
-```
-AS A developer
-I WANT a README generator
-SO THAT I can quickly create a professional README for a new project
-```
-
 ## Installation 
 
 * Node Project Manager
@@ -30,6 +30,9 @@ SO THAT I can quickly create a professional README for a new project
 ## Usage
 
 ```
+* Node Project Manager
+* Javascript
+* Inquirer
 ```
 
 ## License
@@ -42,6 +45,12 @@ None
 
 * N/A
 
+## Tests
+
+To run test, run the following commands:
+
+```
+```
 
 ## Acceptance Criteria
 ```
@@ -62,11 +71,6 @@ WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 ```
 
-## Applications Used
-* Node Project Manager
-* Javascript
-* Inquirer
+## Questions
 
-## Source Links
-
-* [Github]('https://github.com/Samya129/ReadMe-Generator')
+* If you have any questions regarding this repository, contact me either by email at **${Samyaf020@gmail.com}**, or you can find more of my work within my github account attached here [Github](https://github.com/Samya129). Here, you can also open an issue if needed.
