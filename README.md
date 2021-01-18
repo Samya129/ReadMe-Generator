@@ -45,7 +45,8 @@ N/A
 To run test, run the following commands:
 
 ```
-node index OR node index.js
+* npm install then
+* node index OR node index.js
 ```
 
 ## Acceptance Criteria
