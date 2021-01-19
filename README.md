@@ -24,7 +24,7 @@ SO THAT I can quickly create a professional README for a new project
 
 ## Installation 
 
-* Node Project Manager: Inquirer 
+* Node Package Manager: Inquirer 
 
 ## Usage
 
