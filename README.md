@@ -31,7 +31,6 @@ SO THAT I can quickly create a professional README for a new project
 * Node
 * Terminal
 * Javascript
-* ES6
 
 ## License
 
